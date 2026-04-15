@@ -1,1 +1,11 @@
-<app-hero></app-hero>
+<div
+  class="hero-wrapper"
+  [style.opacity]="heroOpacity"
+  [style.transform]="'translateY(' + heroTranslate + 'px)'"
+>
+  <app-hero></app-hero>
+</div>
+
+<app-about></app-about>
+
+<app-video-section videoId="videoId"></app-video-section>
