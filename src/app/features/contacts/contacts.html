@@ -1,1 +1,40 @@
-<p>contacts works!</p>
+<section class="contact">
+
+  <h2 class="section-title">Entre em Contato</h2>
+  <div class="divider"></div>
+
+  <p class="text">
+    Vamos encontrar o imóvel ideal para você com segurança e exclusividade.
+  </p>
+
+  <!-- CTA PRINCIPAL -->
+  <a 
+    [href]="whatsappLink" 
+    target="_blank" 
+    class="btn primary big"
+  >
+    <i class="fa-brands fa-whatsapp"></i>
+    Falar no WhatsApp
+  </a>
+
+  <!-- CONTATOS SECUNDÁRIOS -->
+  <div class="contact-list">
+
+    <a [href]="instagramLink" target="_blank" class="item">
+      <i class="fa-brands fa-instagram"></i>
+      <span>Instagram</span>
+    </a>
+
+    <a [href]="youtubeLink" target="_blank" class="item">
+      <i class="fa-brands fa-youtube"></i>
+      <span>YouTube</span>
+    </a>
+
+    <div class="item">
+      <i class="fa-solid fa-phone"></i>
+      <span>{{ phone }}</span>
+    </div>
+
+  </div>
+
+</section>
