@@ -1,1 +1,45 @@
-<p>footer works!</p>
+<footer class="footer">
+
+  <div class="footer-content">
+
+    <!-- NOME -->
+    <h3 class="name"> {{ broker.name }} </h3>
+
+    <!-- LINHA -->
+    <div class="divider"></div>
+
+    <!-- DESCRIÇÃO -->
+    <p class="description">
+      Especialista em imóveis de alto padrão em Brasília.
+    </p>
+
+    <!-- CONTATOS -->
+    <div class="footer-contact">
+      <span> {{ broker.phone }} </span>
+      <span>•</span>
+      <span> {{ broker.email }} </span>
+    </div>
+
+    <!-- REDES -->
+    <div class="socials">
+      <a [href]="instagramLink" target="_blank">
+        <i class="fa-brands fa-instagram"></i>
+      </a>
+
+      <a [href]="whatsappLink" target="_blank">
+        <i class="fa-brands fa-whatsapp"></i>
+      </a>
+
+      <a [href]="youtubeLink" target="_blank">
+        <i class="fa-brands fa-youtube"></i>
+      </a>
+    </div>
+
+  </div>
+
+  <!-- COPYRIGHT -->
+  <div class="copyright">
+    <p>CRECI {{ broker.CRECI }} • © 2026 Todos os direitos reservados</p>
+  </div>
+
+</footer>

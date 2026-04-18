@@ -1,0 +1,59 @@
+.footer {
+  background: #594122;
+  color: #bb8d50;
+  text-align: center;
+  padding-top: 40px;
+}
+
+/* CONTEÚDO */
+.footer-content {
+  padding: 0 20px 30px;
+}
+
+.name {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+}
+
+/* DESCRIÇÃO */
+.description {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.85rem;
+  color: #a38b6a;
+  margin: 10px 0 16px;
+}
+
+/* CONTATO */
+.footer-contact {
+  font-size: 0.8rem;
+  margin-bottom: 16px;
+  display: flex;
+  justify-content: center;
+  gap: 6px;
+  flex-wrap: wrap;
+}
+
+/* REDES */
+.socials {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+
+  a {
+    color: #a38b6a;
+    font-size: 18px;
+    transition: transform 0.2s ease;
+  }
+
+  a:hover {
+    transform: translateY(-3px);
+  }
+}
+
+/* COPYRIGHT */
+.copyright {
+  border-top: 1px solid rgba(0,0,0,0.1);
+  padding: 12px;
+  font-size: 0.75rem;
+  color: #a38b6a;
+}

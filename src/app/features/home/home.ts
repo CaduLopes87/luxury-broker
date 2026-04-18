@@ -4,10 +4,11 @@ import { About } from '../about/about';
 import { VideoSection } from '../video-section/video-section';
 import { Properties } from "../properties/properties";
 import { Contacts } from "../contacts/contacts";
+import { Footer } from "../footer/footer";
 
 @Component({
   selector: 'app-home',
-  imports: [Hero, About, VideoSection, Properties, Contacts],
+  imports: [Hero, About, VideoSection, Properties, Contacts, Footer],
   templateUrl: './home.html',
   styleUrl: './home.scss',
 })
