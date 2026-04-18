@@ -32,8 +32,8 @@
   text-align: center;
   color: #6b4f2a;
   height: 100%;
-  padding-top: 124px;
-  z-index: 2;
+  padding-top: 64px;
+  z-index: 3;
 }
 
 .name {
@@ -64,6 +64,7 @@
   gap: 12px;
   justify-content: center;
   flex-wrap: wrap;
+  z-index: 4;
 }
 
 .btn {
@@ -95,8 +96,9 @@
   position: absolute;
   bottom: 0;
   right: 0;
-  width: 70%;
+  width: 60vw;
   max-width: 236px;
+  max-height: 50vh;
   z-index: 2;
 
   img {
