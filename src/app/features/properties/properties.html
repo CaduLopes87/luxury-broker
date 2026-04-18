@@ -1,4 +1,4 @@
-<section class="properties">
+<section class="properties" id="properties">
   <h2 class="section-title">Imóveis em Destaque</h2>
   <div class="divider"></div>
 
@@ -15,7 +15,7 @@
             <p class="location">{{ item.location }}</p>
             <span class="price">{{ item.price }}</span>
           </div>
-          <div class="propertie-contact">
+          <div class="propertie-contact" (click)="getApartmentContact(item.title)">
             <i class="fa-brands fa-whatsapp wpp-icon"></i>
             <i class="fa-solid fa-share share-icon"></i>
           </div>

@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, inject, OnInit } from '@angular/core';
+import { BrokerEnum } from '../../core/enums/BrokerEnum.enum';
+import { ContactService } from '../../core/services/contacts/contact-service';
 
 @Component({
   selector: 'app-contacts',
@@ -7,19 +9,14 @@ import { Component, OnInit } from '@angular/core';
   styleUrl: './contacts.scss',
 })
 export class Contacts implements OnInit {
+  contactService = inject(ContactService);
+
   whatsappLink = '';
-  instagramLink = 'https://instagram.com/sheilabezerraimob';
-  youtubeLink = 'https://youtube.com/@sheilabezerraimob';
-  phone = '(61) 99146-4961';
+  instagramLink = `https://instagram.com/${BrokerEnum.instagramUser}`;
+  youtubeLink = `https://youtube.com/${BrokerEnum.youtubeUser}`;
+  phone = BrokerEnum.phone;
 
   ngOnInit(): void {
-    this.whatsappLink = this.getWhatsappLink(
-      'Olá, Sheila! Gostaria de mais informações sobre os imóveis.',
-    );
-  }
-
-  getWhatsappLink(message: string) {
-    const whatsappNumber = this.phone.replace(/\D/g, '');
-    return `https://wa.me/${whatsappNumber}?text=${message}`;
+    this.whatsappLink = this.contactService.getWelcomeWhatsappLink(this.phone);
   }
 }

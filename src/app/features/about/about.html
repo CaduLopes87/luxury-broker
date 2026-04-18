@@ -1,5 +1,5 @@
 <section class="about">
-  <h2 class="section-title">Sobre Sheila Bezerra</h2>
+  <h2 class="section-title">Sobre {{ broker.name }}</h2>
   <div class="divider"></div>
 
   <div class="about-content">
@@ -12,8 +12,9 @@
       <!-- TEXTO -->
       <div class="info">
         <p class="bio">
-          Com mais de <strong>30 anos</strong> de experiência no mercado imobiliário, Sheila Bezerra
-          é especialista em imóveis de luxo e investimentos em Brasília.
+          Com mais de <strong>{{ broker.yearsExperience }} anos</strong> de experiência no mercado
+          imobiliário, {{ broker.name }} é especialista em imóveis de luxo e investimentos em
+          {{ broker.operationArea }}.
         </p>
 
         <h3 class="subtitle">Diferenciais</h3>
@@ -31,24 +32,24 @@
   <div class="stats">
     <div class="card">
       <span class="material-icons">apartment</span>
-      <h3>+120</h3>
+      <h3>+{{ broker.propertiesSold }}</h3>
       <p>imóveis vendidos</p>
     </div>
 
     <div class="card">
       <span class="material-icons">paid</span>
-      <h3>+R$ 80 milhões</h3>
+      <h3>+R$ {{ broker.negociationInMillion }} milhões</h3>
       <p>em negociações</p>
     </div>
 
     <div class="card">
       <span class="material-icons">workspace_premium</span>
-      <h3>30 anos</h3>
+      <h3>{{ broker.yearsExperience }} anos</h3>
       <p>de experiência</p>
     </div>
   </div>
 
-  <!-- BLOCO FINAL (prova social + CTA) -->
+  <!-- CTA -->
   <div class="closing">
     <p class="testimonial">“Atendimento impecável e totalmente personalizado.”</p>
     <span class="author">— Cliente</span>
@@ -58,9 +59,8 @@
       <strong>uma experiência exclusiva para você.</strong>
     </p>
 
-    <button class="btn primary cta">
+    <button class="btn primary cta" (click)="goToWhatsapp()">
       Fale pelo WhatsApp
-
       <i class="fa-brands fa-whatsapp"></i>
     </button>
   </div>

@@ -6,21 +6,23 @@
 
   <div class="content">
     <div class="header-content">
-      <h1 class="name">Sheila Bezerra</h1>
+      <h1 class="name">{{ broker.name }}</h1>
       <div class="divider"></div>
 
       <h2 class="title">
         Especialista em Imóveis de Alto <span>Padrão</span><br />
-        em <span>Brasília</span>
+        em <span>{{ broker.operationArea }}</span>
       </h2>
       <div class="divider"></div>
 
       <p class="subtitle">Conectando você aos melhores investimentos imobiliários.</p>
 
       <div class="actions">
-        <button class="btn primary">Fale pelo WhatsApp</button>
+        <button class="btn primary" (click)="goToWhatsapp()">Fale pelo WhatsApp</button>
 
-        <button class="btn secondary">Ver Imóveis</button>
+        <a href="#properties" class="btn secondary" aria-label="Ver imóveis disponíveis">
+          Ver Imóveis
+        </a>
       </div>
     </div>
 
