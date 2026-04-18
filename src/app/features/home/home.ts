@@ -2,10 +2,11 @@ import { Component, HostListener } from '@angular/core';
 import { Hero } from '../hero/hero';
 import { About } from '../about/about';
 import { VideoSection } from '../video-section/video-section';
+import { Properties } from "../properties/properties";
 
 @Component({
   selector: 'app-home',
-  imports: [Hero, About, VideoSection],
+  imports: [Hero, About, VideoSection, Properties],
   templateUrl: './home.html',
   styleUrl: './home.scss',
 })
@@ -14,7 +15,7 @@ export class Home {
   aboutOpacity = 0;
   heroTranslate = 0;
 
-  videoID = 'JvhOawEE0_k?playsinline=1';
+  videoID = 'vNDMTsoBWuU';
 
   @HostListener('window:scroll', [])
   onScroll() {
